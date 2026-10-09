@@ -1,0 +1,233 @@
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #eaf2ff;
+  background: linear-gradient(135deg, #07111d 0%, #0d1b2a 50%, #12243d 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(980px, 92vw);
+  background: rgba(11, 18, 28, 0.8);
+  border: 1px solid rgba(146, 180, 255, 0.28);
+  border-radius: 20px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+  padding: 32px 28px 36px;
+}
+
+.topbar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: #8ac5ff;
+}
+
+.topbar h1 {
+  margin: 12px 0 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(146, 180, 255, 0.2);
+  color: #eaf2ff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover,
+.tab.active {
+  background: linear-gradient(135deg, #4ea1ff, #7f6bff);
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 26px 22px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+}
+
+.intro,
+.welcome {
+  margin: 0 0 12px;
+  color: #d6e4ff;
+}
+
+.generator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.generator-form label {
+  font-weight: 600;
+  color: #f5f9ff;
+}
+
+.generator-form textarea,
+.generator-form input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(155, 190, 255, 0.28);
+  background: rgba(12, 17, 26, 0.9);
+  color: #eff7ff;
+  padding: 14px 16px;
+}
+
+.generator-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.generator-form input[type='file'] {
+  padding: 10px;
+}
+
+.generator-form textarea:focus,
+.generator-form input:focus {
+  outline: 2px solid rgba(118, 173, 255, 0.8);
+  border-color: transparent;
+}
+
+.generator-form button {
+  align-self: flex-start;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #63d0ff, #7d67ff);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.generator-form button:hover {
+  opacity: 0.95;
+}
+
+.generator-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.message {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.error {
+  color: #ff9ea5;
+}
+
+.result-card {
+  margin-top: 22px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(160, 200, 255, 0.2);
+  background: rgba(10, 14, 24, 0.9);
+}
+
+.result-card img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.result-card a {
+  display: inline-block;
+  padding: 12px 16px;
+  color: #dfeeff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.recipe-output {
+  margin-top: 22px;
+}
+
+.recipe-output label,
+.transcription-output label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.result-textarea {
+  width: 100%;
+  min-height: 280px;
+  resize: vertical;
+  border-radius: 12px;
+  border: 1px solid rgba(155, 190, 255, 0.28);
+  background: rgba(12, 17, 26, 0.9);
+  color: #eff7ff;
+  padding: 14px 16px;
+}
+
+.transcription-output {
+  margin-top: 22px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 22px 16px 28px;
+  }
+
+  .tab {
+    width: 100%;
+  }
+}
