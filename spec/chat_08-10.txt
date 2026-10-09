@@ -1,0 +1,9 @@
+Chat transcript - 2026-10-08
+
+User: With updated spec file 1) update React code for receipe generator tab 2) Add React code for Audio Transcription tab
+
+Assistant: Updated the Recipe Generator with Cuisine and Dietary Restrictions fields, and added an Audio Transcription tab with audio upload and a read-only transcription area. Both tabs call the existing backend endpoints; audio uses multipart form data with the `file` field.
+
+Added the audio endpoint to `.env.example` and enabled CORS for the transcription endpoint so the React app can call it from `localhost:3000`.
+
+User: export today's chat to chat_08-10.txt in spec folder
